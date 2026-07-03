@@ -58,36 +58,47 @@ Requirements
 
 LOGIN
 - Successful Login
-- Invalid Password
-- Invalid Username
-- Empty Fields
-- Password Visibility
-- Session Persistence
+- Invalid Credentials
+- Forgot Password
+- Empty Username
+- Empty Password
+- Empty Username and Password
+- Password Visibility Toggle
+- Session Expiry
 - Logout
-- SQL Injection
-- XSS Validation
+- Account Lockout after Multiple Failed Attempts
+- SQL Injection Validation
+- Cross-Site Scripting (XSS) Validation
 
 DASHBOARD
-- Dashboard loads successfully
-- Verify Dashboard heading
-- Verify Left Navigation
-- Navigate to PIM
-- Navigate to Leave
-- Navigate back to Dashboard
-- Search functionality
-- User Profile menu
-- Responsive layout
+- Dashboard Loads Successfully
+- Dashboard Widgets Display Correctly
+- Dashboard Data Accuracy
+- Search Functionality
+- Filter Functionality
+- Sort Functionality
+- Left Navigation Menu
+- User Profile Menu
+- Permission-Based Visibility
+- Responsive Layout
 
 API
+- Authentication Token Validation
+- GET Request Validation
+- POST Request Validation
+- PUT Request Validation
+- DELETE Request Validation
 - Status Code Validation
 - Required Fields Validation
-- Missing Field Validation
+- Missing Fields Validation
 - Invalid Data Type Validation
-- Empty Response Validation
-- Response Time Validation
 - Unauthorized Request
+- Forbidden Request
 - Invalid Endpoint
-- Error Response Validation
+- Empty Response Validation
+- Server Error (5xx) Validation
+- Rate Limiting Validation
+- Response Time Validation
 
 Return ONLY JSON.
 Do not use markdown.

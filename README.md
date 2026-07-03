@@ -21,6 +21,23 @@ The objective is to reduce the manual effort involved in regression testing whil
 - Single-command pipeline execution
 
 ---
+## Task 3 – LLM Integration
+
+This project implements **Option A – Failure Explainer**.
+
+The framework integrates the Google Gemini API directly into the test execution pipeline to analyze UI screenshots and API responses.
+
+### Why Option A?
+
+Failure explanations provide immediate value to QA engineers by converting raw failures into structured, human-readable feedback. Instead of manually inspecting screenshots or API payloads, the framework automatically generates:
+
+- PASS/FAIL status
+- Detected issues
+- Validation summary
+- Suggested debugging information
+
+This reduces manual investigation time and makes regression analysis significantly faster.
+---
 
 ## Architecture
 
@@ -135,7 +152,7 @@ AI-QA-Automation/
 Clone the repository.
 
 ```bash
-git clone https://github.com/<your-github-username>/AI-QA-Automation.git
+git clone https://github.com/signioratul/testmu-sdet1-atulsharma.git
 
 cd AI-QA-Automation
 ```
@@ -245,12 +262,9 @@ Pipeline Status : PASS
 ```
 reports/
 
-generated_testcases.json
-
+login_testcases.json
 ui_validation.json
-
 api_validation.json
-
 final_report.json
 ```
 
@@ -296,16 +310,18 @@ dashboard_navigation.png
 
 ---
 
-## Future Improvements
+## What I'd Build Next
 
-- HTML reports
-- GitHub Actions CI/CD integration
-- Cross-browser execution
-- Parallel Playwright execution
-- Database validation
-- Email notifications
-- Slack notifications
-- Performance testing support
+With additional development time, I would extend the framework with the following capabilities:
+
+- AI-powered self-healing Playwright locators.
+- GitHub Actions CI/CD integration for automated execution on every commit.
+- Cross-browser execution across Chromium, Firefox and WebKit.
+- Parallel execution to reduce regression testing time.
+- HTML dashboard with execution history and trend analysis.
+- Automatic Jira defect creation for failed test cases.
+- Support for data-driven testing using CSV and Excel datasets.
+- AI-generated root cause analysis by combining Playwright logs, screenshots and API responses.
 
 ---
 
@@ -319,7 +335,7 @@ dashboard_navigation.png
 
 ## License
 
-This project is provided for educational and demonstration purposes.
+This repository was developed as part of the TestMu AI SDET-1 Technical Assessment and is intended for educational and evaluation purposes.
 
 ---
 
@@ -327,6 +343,6 @@ This project is provided for educational and demonstration purposes.
 
 **Atul Sharma**
 
-GitHub: https://github.com/signioratul/AI-automation
+GitHub: https://github.com/signioratul/testmu-sdet1-atulsharma.git
 
 LinkedIn: https://www.linkedin.com/in/atul-sharma-a228a6216/

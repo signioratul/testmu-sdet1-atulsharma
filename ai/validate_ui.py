@@ -1,3 +1,14 @@
+# ============================================================================
+# Task 3 - Option A: Failure Explainer
+#
+# This implementation uses an LLM to analyze the captured UI screenshot and
+# generate a structured PASS/FAIL assessment with detected issues.
+#
+# Option A was selected because it provides immediate, human-readable feedback
+# that helps QA engineers quickly understand UI failures without manually
+# inspecting screenshots.
+# ============================================================================
+
 from PIL import Image
 from utils.gemini_client import client
 import json

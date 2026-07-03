@@ -1,3 +1,14 @@
+# ============================================================================
+# Task 3 - Option A: Failure Explainer
+#
+# This implementation uses an LLM to validate API responses against the
+# expected schema and generate structured PASS/FAIL results with warnings
+# and a validation summary.
+#
+# This approach reduces manual inspection and accelerates debugging by
+# automatically explaining validation outcomes.
+# ============================================================================
+
 import requests
 import json
 from utils.gemini_client import client
