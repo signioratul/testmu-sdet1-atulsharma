@@ -184,8 +184,6 @@ Example:
 GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 ```
 
-> Never commit your `.env` file to GitHub.
-
 ---
 
 ## Running the Project
