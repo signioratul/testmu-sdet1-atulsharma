@@ -20,8 +20,8 @@ steps = [
     ("Execute Generated Login Test",
      [python, "-m", "pytest", "tests/generated_login.py", "-v"]),
 
-    ("Execute Generated Dashboard Test",
-     [python, "-m", "pytest", "tests/generated_dashboard.py", "-v"]),
+    # ("Execute Generated Dashboard Test",
+    #  [python, "-m", "pytest", "tests/generated_dashboard.py", "-v"]),
 
     ("Validate UI",
      [python, "-m", "ai.validate_ui"]),

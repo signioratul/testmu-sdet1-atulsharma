@@ -15,14 +15,9 @@ def test_generated_login():
 
         print("Opening login page...")
 
-        page.goto(URL, wait_until="domcontentloaded")
-
-        print("Current URL:", page.url)
-        print("Page Title:", page.title())
-
-        page.screenshot(
-            path="screenshots/debug_login_page.png",
-            full_page=True
+        page.goto(
+            URL,
+            wait_until="domcontentloaded"
         )
 
         page.wait_for_selector(
@@ -35,9 +30,27 @@ def test_generated_login():
 
         page.locator('button[type="submit"]').click()
 
+        page.wait_for_url(
+            "**/dashboard/**",
+            timeout=120000
+        )
+
         expect(
             page.locator("h6")
-        ).to_have_text("Dashboard", timeout=120000)
+        ).to_have_text(
+            "Dashboard",
+            timeout=120000
+        )
+
+        print("Waiting for dashboard widgets to finish loading...")
+
+        page.wait_for_load_state("networkidle")
+
+        page.wait_for_function("""
+            () => document.querySelectorAll('.oxd-loading-spinner').length === 0
+        """)
+
+        page.wait_for_timeout(3000)
 
         page.screenshot(
             path="screenshots/dashboard.png",
